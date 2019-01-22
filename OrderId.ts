@@ -1,4 +1,4 @@
-import uuidv4 from 'uuid/v4';
+import { v4 } from 'uuid';
 
 class OrderId {
 
@@ -13,7 +13,7 @@ class OrderId {
   }
 
   public static generateNew(): OrderId {
-    return new OrderId(uuidv4());
+    return new OrderId(v4());
   }
 
   public equals(that: OrderId): boolean {
