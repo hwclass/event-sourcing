@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "ts-node OrderId.ts",
+    "build": "ts-node dispatchEvent.ts",
+    "build:client": "tsc --outDir dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/uuid": "^3.4.4",
+    "moment": "^2.24.0",
     "ts-node": "^8.0.1",
     "typescript": "^3.2.4",
     "uuid": "^3.3.2"

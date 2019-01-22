@@ -24,3 +24,5 @@ class OrderId {
     return this.id;
   } 
 }
+
+export default OrderId
