@@ -1,7 +1,6 @@
-import { v4 } from 'uuid';
+import { v4 } from "uuid";
 
 class OrderId {
-
   private id: string;
 
   private constructor(id: string) {
@@ -22,7 +21,7 @@ class OrderId {
 
   public toString(): string {
     return this.id;
-  } 
+  }
 }
 
-export default OrderId
+export default OrderId;

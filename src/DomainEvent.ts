@@ -1,3 +1,3 @@
 export default abstract class DomainEvent {
-    abstract getClassName(): string
+  abstract className(): string;
 }
