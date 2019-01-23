@@ -9,7 +9,7 @@ class Email {
     this.email = email;
   }
 
-  isValid(email: string): Boolean {
+  private isValid(email: string): Boolean {
     // return true if it is valid
     if (!/\S+@\S+\.\S+/.test(email)) {
       return true;
