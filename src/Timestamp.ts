@@ -8,13 +8,13 @@ class Timestamp {
     if (timestamp === "" && !Timestamp.isValid(timestamp)) {
       throw Error("Invalid timestamp");
     }
-    this.timestamp = moment("2013-03-01", "YYYY-MM-DD HH:mm:ss").format(
+    this.timestamp = moment(timestamp, Timestamp.format).format(
       Timestamp.format
     );
   }
 
   private static isValid(timestamp: string): Boolean {
-    return moment(timestamp, this.format, true).isValid();
+    return moment(timestamp, Timestamp.format, true).isValid();
   }
 
   public toString(): string {
@@ -23,6 +23,10 @@ class Timestamp {
 
   public static fromString(timestamp: string): Timestamp {
     return new Timestamp(timestamp);
+  }
+
+  public static fromNow(): Timestamp {
+    return new Timestamp(moment().format(Timestamp.format));
   }
 
   public equals(that: Timestamp): Boolean {
