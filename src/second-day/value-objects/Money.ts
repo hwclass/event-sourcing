@@ -31,3 +31,5 @@ class Money {
     return new Money(this.cents - money.cents, this.currency);
   }
 }
+
+export default Money;
