@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import "mocha";
-import Email from "../src/Email";
+import Email from "../src/first-day/Email";
 
 describe("Email", () => {
   const invalidEmail = "some@";

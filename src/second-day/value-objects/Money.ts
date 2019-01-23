@@ -5,6 +5,9 @@ class Money {
   private currency: Currency;
 
   private constructor(cents: number, currency: Currency) {
+    if (!Number.isInteger(cents)) {
+      throw new Error("Cents is not a integer");
+    }
     this.cents = cents;
   }
 
