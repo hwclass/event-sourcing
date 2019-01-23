@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var EventDispatcher_1 = require("./EventDispatcher");
+var LogEvents_1 = require("./LogEvents");
+var MemberRegistered_1 = require("./MemberRegistered");
+var MemberId_1 = require("./MemberId");
+var MemberName_1 = require("./MemberName");
+var Email_1 = require("./Email");
+var Timestamp_1 = require("./Timestamp");
+var MemberChangedTheirEmail_1 = require("./MemberChangedTheirEmail");
+var eventDispatcher = new EventDispatcher_1["default"]();
+eventDispatcher.addListener(new LogEvents_1["default"]());
+var memberRegisteredEvent = new MemberRegistered_1["default"](MemberId_1["default"].generateNew(), new MemberName_1["default"]("Some"), new Email_1["default"]("some@example.com"), Timestamp_1["default"].fromString("2019-12-01 12:22:22"));
+var memberChangedEmailEvent = new MemberChangedTheirEmail_1["default"](MemberId_1["default"].generateNew(), new MemberName_1["default"]("Some"), new Email_1["default"]("some@example.com"), new Email_1["default"]("all@example.com"), Timestamp_1["default"].fromNow());
+eventDispatcher.dispatch(memberRegisteredEvent);
+eventDispatcher.dispatch(memberChangedEmailEvent);
