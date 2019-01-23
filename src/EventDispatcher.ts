@@ -1,10 +1,10 @@
-import LogEvents from "./LogEvents";
+import EventListener from "./EventListener";
 import DomainEvent from "./DomainEvent";
 
 class EventDispatcher {
-  private listeners: LogEvents[] = [];
+  private listeners: EventListener[] = [];
 
-  public addListener(listener: LogEvents) {
+  public addListener(listener: EventListener) {
     this.listeners.push(listener);
   }
 

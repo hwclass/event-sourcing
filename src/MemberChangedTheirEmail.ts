@@ -1,29 +1,32 @@
 // Data transfer object - no behavior!
 import DomainEvent from "./DomainEvent";
-import OrderId from "./OrderId";
+import MemberId from "./MemberId";
 import Timestamp from "./Timestamp";
 import MemberName from "./MemberName";
 import Email from "./Email";
 
 class MemberChangedTheirEmail implements DomainEvent {
-  private id: OrderId;
+  private id: MemberId;
   private name: MemberName;
-  private email: Email;
+  private oldEmail: Email;
+  private newEmail: Email;
   private changedAt: Timestamp;
 
   public constructor(
-    id: OrderId,
+    id: MemberId,
     name: MemberName,
-    email: Email,
+    oldEmail: Email,
+    newEmail: Email,
     changedAt: Timestamp
   ) {
     this.id = id;
     this.name = name;
-    this.email = email;
+    this.oldEmail = oldEmail;
+    this.newEmail = newEmail;
     this.changedAt = changedAt;
   }
 
-  getId(): OrderId {
+  getId(): MemberId {
     return this.id;
   }
 
@@ -31,8 +34,12 @@ class MemberChangedTheirEmail implements DomainEvent {
     return this.name;
   }
 
-  getEmail(): Email {
-    return this.email;
+  getOldEmail(): Email {
+    return this.oldEmail;
+  }
+
+  getNewEmail(): Email {
+    return this.newEmail;
   }
 
   getChangedAt(): Timestamp {
@@ -40,7 +47,7 @@ class MemberChangedTheirEmail implements DomainEvent {
   }
 
   className(): string {
-    return this.className();
+    return "MemberChangedTheirEmail";
   }
 }
 
