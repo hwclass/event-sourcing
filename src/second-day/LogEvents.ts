@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import DomainEvent from "./DomainEvent";
+import DomainEvent from "./events/DomainEvent";
 import EventListener from "./EventListener";
 
 class LogEvents implements EventListener {

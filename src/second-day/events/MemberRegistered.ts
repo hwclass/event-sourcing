@@ -1,8 +1,8 @@
 // Data transfer object - no behavior!
-import MemberId from "./MemberId";
-import Timestamp from "./Timestamp";
-import MemberName from "./MemberName";
-import Email from "./Email";
+import MemberId from "../value-objects/MemberId";
+import Timestamp from "../value-objects/Timestamp";
+import MemberName from "../value-objects/MemberName";
+import Email from "../value-objects/Email";
 import DomainEvent from "./DomainEvent";
 
 class MemberRegistered implements DomainEvent {

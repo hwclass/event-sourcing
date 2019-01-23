@@ -1,11 +1,12 @@
 import EventDispatcher from "./EventDispatcher";
 import LogEvents from "./LogEvents";
-import MemberRegistered from "./MemberRegistered";
-import MemberId from "./MemberId";
-import MemberName from "./MemberName";
-import Email from "./Email";
-import Timestamp from "./Timestamp";
-import MemberChangedTheirEmail from "./MemberChangedTheirEmail";
+import MemberRegistered from "./events/MemberRegistered";
+import MemberChangedTheirEmail from "./events/MemberChangedTheirEmail";
+import MemberId from "./value-objects/MemberId";
+import MemberName from "./value-objects/MemberName";
+import Email from "./value-objects/Email";
+import Timestamp from "./value-objects/Timestamp";
+
 
 const eventDispatcher = new EventDispatcher();
 

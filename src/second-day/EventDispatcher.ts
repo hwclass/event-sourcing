@@ -1,5 +1,5 @@
 import EventListener from "./EventListener";
-import DomainEvent from "./DomainEvent";
+import DomainEvent from "./events/DomainEvent";
 
 class EventDispatcher {
   private listeners: EventListener[] = [];
