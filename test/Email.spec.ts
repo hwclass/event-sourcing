@@ -1,4 +1,3 @@
-import Timestamp from "../src/Timestamp";
 import { expect } from "chai";
 import "mocha";
 import Email from "../src/Email";
